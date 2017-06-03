@@ -3,12 +3,12 @@ module.exports = {
   controller: TechsController
 };
 
-/** @ngInject app/techs/techs.json */
+/** @ngInject */
 function TechsController($http) {
   var vm = this;
 
   $http
-    .get('http://190.107.60.5:8080/api/products')
+    .get('http://private-7dfe49-jhonquispe6887.apiary-mock.com/products')
     .then(function (response) {
       vm.techs = response.data;
     });
